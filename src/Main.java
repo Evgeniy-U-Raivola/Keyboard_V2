@@ -8,10 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main extends JFrame implements KeyListener, MouseListener {
-    private int diam,d1;
+    private int diam;
     private static int coordX=-500,coordY=-500;
-    JLabel label,label1;
-    static JTextField tf;
+  static   JLabel label,label1;
     private int colorR,colorG,colorB;
 //   FileWriter writer=new FileWriter("C:\\08_JAVA\\Keyboard_V2\\src\\output.txt",true);
 
@@ -53,30 +52,20 @@ public class Main extends JFrame implements KeyListener, MouseListener {
              this.addMouseListener(this);
                }
      public static void main(String[] arg) throws IOException {
-         Main m2=new Main(200);
+         Main m2=new Main(250);
      }
-     /* Main m1=new Main();
-        tf=new JTextField(50);
-        tf.setBounds(0,30,500,50);
-        tf.setBackground(Color.white);
-        tf.addKeyListener(m1);
-        m1.add(tf);
-        tf.requestFocus();*/
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     @Override
     public void mouseClicked(MouseEvent e) {
-        d1=diam;
         coordX=e.getXOnScreen()-100-diam/2;
         coordY=e.getYOnScreen()-30-diam/2;
+        colorB=(int) (Math.random() * 256);
         colorR=(int) (Math.random() * 256);
         colorG=(int) (Math.random() * 256);
-        colorB=(int) (Math.random() * 256);
         repaint();
-        System.out.println(e.getXOnScreen()+"  "+e.getYOnScreen());
     }
         public void paint(Graphics g){
-        super.paintComponents(g);
+        super.paint(g);//или super.paintComponents(g); если закомментить-не стираются старые круги
         Color ferr1=new Color(colorR,colorG,colorB);
         g.setColor(ferr1);
         g.fillOval(coordX,coordY,diam,diam);}
