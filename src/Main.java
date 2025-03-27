@@ -42,17 +42,18 @@ public class Main extends JFrame implements KeyListener, MouseListener {
              this.setVisible(true);
              this.setLayout(null);
 
-             label1 = new JLabel("  диаметр=" + diam);
+            /* label1 = new JLabel("  диаметр=" + diam);
              label1.setBounds(0,0,120,30);
              label1.setOpaque(true);
              label1.setBackground(Color.LIGHT_GRAY);
              this.add(label1);
-             label1.setVisible(true);
+             label1.setVisible(true);*/
 
              this.addMouseListener(this);
+
                }
      public static void main(String[] arg) throws IOException {
-         Main m2=new Main(250);
+         Main m2=new Main(50);
      }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     @Override
@@ -65,10 +66,10 @@ public class Main extends JFrame implements KeyListener, MouseListener {
         repaint();
     }
         public void paint(Graphics g){
-        super.paint(g);//или super.paintComponents(g); если закомментить-не стираются старые круги
+        //super.paint(g);//или super.paintComponents(g); если закомментить - не стираются старые круги
         Color ferr1=new Color(colorR,colorG,colorB);
         g.setColor(ferr1);
-        g.fillOval(coordX,coordY,diam,diam);}
+        g.fillOval(coordX,coordY,diam,diam);  }
     @Override
     public void mousePressed(MouseEvent e) {  }
     @Override
