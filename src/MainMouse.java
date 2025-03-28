@@ -20,7 +20,7 @@ public class MainMouse extends JFrame implements MouseListener {
         this.setVisible(true);
         this.setLayout(null);
         this.addMouseListener(this);// не понял как это работает...
-        this.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR)); //смена вида курсора
     }
     public static void main(String[] args) {
         MainMouse mm=new MainMouse(100);
