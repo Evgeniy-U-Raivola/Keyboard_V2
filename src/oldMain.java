@@ -4,10 +4,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main extends JFrame implements KeyListener, MouseListener {
+public class oldMain extends JFrame implements KeyListener, MouseListener {
     private int diam;
     private static int coordX=-500,coordY=-500;
   static   JLabel label,label1;
@@ -32,7 +31,7 @@ public class Main extends JFrame implements KeyListener, MouseListener {
     }*/
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -
 // конструктор для второй задачи
-     Main(int diam) throws IOException{
+     oldMain(int diam) throws IOException{
              this.diam=diam;
       // - - - - - - - - - - - - - - - - - - - - - - - -
              this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,9 +51,9 @@ public class Main extends JFrame implements KeyListener, MouseListener {
              this.addMouseListener(this);
 
                }
-     public static void main(String[] arg) throws IOException {
-         Main m2=new Main(50);
-     }
+//     public static void main(String[] arg) throws IOException {
+ //        oldMain m2=new oldMain(50);
+//     }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     @Override
     public void mouseClicked(MouseEvent e) {
