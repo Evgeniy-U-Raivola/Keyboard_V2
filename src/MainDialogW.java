@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class MainDialogW extends JFrame {
+public class MainDialogW extends JFrame implements KeyListener {
     static String word;
               MainDialogW() {
                   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -10,16 +12,21 @@ public class MainDialogW extends JFrame {
                   this.getContentPane().setBackground(Color.DARK_GRAY);
                   this.setLayout(new BorderLayout());
                   this.setVisible(true);
+                  this.addKeyListener(this);
               }
-
     public static void main(String[] args) {
                   MainDialogW m5=new MainDialogW();
-
-        int input = JOptionPane.showConfirmDialog(m5, "Do you like bacon?");
-// 0 = да, 1 = нет, 2 = отменить
-       if (input==1) { word="Выбрасываем";}
-       if (input==0) { word=" Ооо, гурман!";}
-       if (input==2) {word="этоконец";}
-         JOptionPane.showMessageDialog(m5,word,"сообщение",1);
            }
+    @Override
+    public void keyTyped(KeyEvent e) { }
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() ==KeyEvent.VK_SPACE  )  {
+        int input = JOptionPane.showConfirmDialog(null, "Do you like bacon?");
+// 0 = да, 1 = нет, 2 = отменить
+        word=input==1? "Выбрасываем": input==0?" Ооо, гурман!": "этоконец";
+        JOptionPane.showMessageDialog(this,word,"сообщение",1); }
+    }
+    @Override
+    public void keyReleased(KeyEvent e) { }
 }
