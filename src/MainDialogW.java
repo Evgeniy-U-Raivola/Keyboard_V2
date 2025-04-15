@@ -9,14 +9,13 @@ public class MainDialogW extends JFrame implements KeyListener {
                   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                   this.setBounds(200,50,800,500);
                   this.setTitle("Диалоговые окна");
-                  this.getContentPane().setBackground(Color.DARK_GRAY);
+                  this.getContentPane().setBackground(Color.WHITE);
                   this.setLayout(new BorderLayout());
                   this.setVisible(true);
                   this.addKeyListener(this);
               }
     public static void main(String[] args) {
-                  MainDialogW m5=new MainDialogW();
-           }
+                  MainDialogW m5=new MainDialogW();  }
     @Override
     public void keyTyped(KeyEvent e) { }
     @Override
