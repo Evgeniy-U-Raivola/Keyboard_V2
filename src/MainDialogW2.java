@@ -11,14 +11,14 @@ public class MainDialogW2 extends JFrame {
                this.setVisible(true);
            }
      public static void main(String[] args) {
-               MainDialogW2 m6=new MainDialogW2();
-          try {
-                  word1 = JOptionPane.showInputDialog(m6, "Введите имя");
-                  if (word1.isEmpty()) { System.exit(0);  }
-                  else {
-                           JOptionPane.showMessageDialog(m6, "Ваше имя:  " + word1, "", 1);
-                           }
-               }
-          catch (NullPointerException e) { }
-           }
+      MainDialogW2 m6=new MainDialogW2();
+                  try {
+                      word1 = JOptionPane.showInputDialog(m6, "Введите имя");
+                      if (word1.isEmpty()) {
+                          JOptionPane.showMessageDialog(m6, "Неправильный ввод!  ", "", 1);
+                      } else {
+                          JOptionPane.showMessageDialog(m6, "Ваше имя:  " + word1, "", 1);
+                      }
+                  } catch (NullPointerException e) { }
+     }
 }
