@@ -8,7 +8,7 @@ public class MainDialogW extends JFrame implements KeyListener {
               MainDialogW() {
                   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                   this.setBounds(200,50,800,500);
-                  this.setTitle("Диалоговые окна");
+                  this.setTitle("Диалоговые окна        !!нажмите пробел!!");
                   this.getContentPane().setBackground(Color.WHITE);
                   this.setLayout(new BorderLayout());
                   this.setVisible(true);
